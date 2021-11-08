@@ -39,7 +39,7 @@ public class BackupHelper {
 	public static Runnable create(BackupContext ctx) {
 		Utilities.notifyPlayers(ctx.getServer(),
 				ctx.getInitiatorUUID(),
-				"Warning! Server backup will begin shortly. You may experience some lag."
+				"警告！ 服務器備份將很快開始 您可能會遇到一些卡頓"
 				);
 
 		StringBuilder builder = new StringBuilder();
@@ -59,7 +59,7 @@ public class BackupHelper {
 		log.info(builder.toString());
 
 		if (ctx.shouldSave()) {
-			log.sendInfoAL(ctx, "Saving server...");
+			log.sendInfoAL(ctx, "保存服務器...");
 
 			ctx.getServer().getPlayerManager().saveAllPlayerData();
 
@@ -113,7 +113,7 @@ public class BackupHelper {
 	private static boolean deleteFile(File f, ServerCommandSource ctx) {
 		if(Statics.untouchableFile.isEmpty()|| !Statics.untouchableFile.get().equals(f)) {
 			if(f.delete()) {
-				log.sendInfoAL(ctx, "Deleting: {}", f.getName());
+				log.sendInfoAL(ctx, "刪除檔案: {}", f.getName());
 				return true;
 			} else {
 				log.sendErrorAL(ctx, "Something went wrong while deleting: {}.", f.getName());

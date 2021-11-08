@@ -51,7 +51,7 @@ public class MakeBackupRunnable implements Runnable {
             Utilities.disableWorldSaving(context.getServer());
             Statics.disableWatchdog = true;
 
-            log.sendInfoAL(context, "Starting backup");
+            log.sendInfoAL(context, "開始備份");
 
             File world = Utilities.getWorldFolder(context.getServer());
 
@@ -116,7 +116,7 @@ public class MakeBackupRunnable implements Runnable {
             Utilities.notifyPlayers(
                     context.getServer(),
                     context.getInitiatorUUID(),
-                    "Done!"
+                    "完成!"
             );
         } finally {
             Utilities.enableWorldSaving(context.getServer());

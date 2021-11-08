@@ -82,7 +82,7 @@ public abstract class AbstractCompressor {
 
         //  close();
 
-        log.sendInfoAL(ctx, "Compression took: {} seconds.", Utilities.formatDuration(Duration.between(start, Instant.now())));
+        log.sendInfoAL(ctx, "壓縮時間： {} 秒", Utilities.formatDuration(Duration.between(start, Instant.now())));
     }
 
     protected abstract OutputStream createArchiveOutputStream(OutputStream stream, BackupContext ctx, int coreLimit) throws IOException;

@@ -60,7 +60,7 @@ public class RestoreHelper {
         Utilities.notifyPlayers(
                 ctx.server(),
                 ctx.getInitiatorUUID(),
-                "Warning! The server is going to shut down in " + config.get().restoreDelay + " seconds!"
+                "警告！ 服務器即將回檔 剩餘: " + config.get().restoreDelay + " 秒!"
         );
 
         return new AwaitThread(

@@ -89,6 +89,7 @@ public class RestoreBackupRunnable implements Runnable {
         Statics.globalShutdownBackupFlag.set(true);
 
         log.info("Done!");
+        Runtime.getRuntime().exit(105);
 
         //Might solve #37
         //Idk if it's a good idea...

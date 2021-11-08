@@ -45,15 +45,15 @@ import net.szum123321.textile_backup.core.create.BackupScheduler;
 import java.util.concurrent.Executors;
 
 public class TextileBackup implements ModInitializer {
-    public static final String MOD_NAME = "Textile Backup";
-    public static final String MOD_ID = "textile_backup";
+    public static final String MOD_NAME = "ExpTech_Fabric_BackUp";
+    public static final String MOD_ID = "ExpTech_Fabric_BackUp";
 
     private final static TextileLogger log = new TextileLogger(MOD_NAME);
     private final static ConfigHelper config = ConfigHelper.INSTANCE;
 
     @Override
     public void onInitialize() {
-        log.info("Starting Textile Backup by Szum123321");
+        log.info("Starting ExpTech_Fabric_BackUp by whes1015");
 
         ConfigHelper.updateInstance(AutoConfig.register(ConfigPOJO.class, JanksonConfigSerializer::new));
 

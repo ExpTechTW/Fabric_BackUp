@@ -35,14 +35,14 @@ public class AwaitThread extends Thread {
     private final Runnable taskRunnable;
 
     public AwaitThread(int delay, Runnable taskRunnable) {
-        this.setName("Textile Backup await thread nr. " + thisThreadId);
+        this.setName("ExpTech_Fabric_BackUp await thread nr. " + thisThreadId);
         this.delay = delay;
         this.taskRunnable = taskRunnable;
     }
 
     @Override
     public void run() {
-        log.info("Countdown begins... Waiting {} second.", delay);
+        log.info("倒計時開始... 等待: {} 秒", delay);
 
         // 𝄞 This is final count down! Tu ruru Tu, Tu Ru Tu Tu ♪
         try {
@@ -57,6 +57,6 @@ public class AwaitThread extends Thread {
             But still it's farewell
             And maybe we'll come back
          */
-        new Thread(taskRunnable, "Textile Backup restore thread nr. " + thisThreadId).start();
+        new Thread(taskRunnable, "ExpTech_Fabric_BackUp restore thread nr. " + thisThreadId).start();
     }
 }

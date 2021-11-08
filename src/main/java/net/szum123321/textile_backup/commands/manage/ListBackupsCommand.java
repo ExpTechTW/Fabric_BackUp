@@ -43,7 +43,7 @@ public class ListBackupsCommand {
                     } else {
                         backups.sort(null);
                         Iterator<RestoreHelper.RestoreableFile> iterator = backups.iterator();
-                        builder.append("Available backups:\n");
+                        builder.append("可用備份：\n");
 
                         builder.append(iterator.next());
 
